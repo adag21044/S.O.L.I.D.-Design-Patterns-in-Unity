@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Health Potion
-  description: New Item Description
+  description: Heals
   useText: Drink Me!
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
