@@ -89,7 +89,7 @@ public class Mover_Bad : MonoBehaviour
 
 `Mover_Good`
 An improved version that adheres to DIP by depending on the IMovementInputGetter interface.
-```charp
+```csharp
 public class Mover_Good : MonoBehaviour
 {
     private IMovementInputGetter movementInputGetter = null;
@@ -114,7 +114,7 @@ public class Mover_Good : MonoBehaviour
 
 `Damage System`
 Demonstrates the Interface Segregation Principle (ISP) with IDamageable and ICharacter interfaces.
-```charp
+```csharp
 public interface ICharacter 
 {
     string Name { get; }
@@ -133,7 +133,7 @@ The Open/Closed Principle (OCP) is showcased through different implementations o
 
 `ITargetGetter` Interface
 Defines a method to get targets for a character or object.
-```charp
+```csharp
 public interface ITargetGetter 
 {
     List<Transform> GetTargets(Transform transform);
@@ -142,7 +142,7 @@ public interface ITargetGetter
 
 `AllTargetting` Class
 Gets all transforms in the scene.
-```charp
+```csharp
 public class AllTargetting : MonoBehaviour, ITargetGetter
 {
     public List<Transform> GetTargets(Transform transform)
@@ -154,7 +154,7 @@ public class AllTargetting : MonoBehaviour, ITargetGetter
 
 `InRadiusTargetting` Class
 Gets targets within a specified radius
-```charp
+```csharp
 public class InRadiusTargetting : MonoBehaviour, ITargetGetter
 {
     [SerializeField] private float radius = 5f;
@@ -178,7 +178,7 @@ Showcasing inheritance and polymorphism with `Item`, `Weapon`, and `Consumable` 
 
 `Item` Abstract Class
 Defines common properties for all items.
-```charp
+```csharp
 public abstract class Item : MonoBehaviour
 {
     [SerializeField] private string itemName = "New Item Name";
@@ -192,7 +192,7 @@ public abstract class Item : MonoBehaviour
 ```
 `Weapon` Class
 A concrete item class that represents a weapon.
-```charp
+```csharp
 public class Weapon : Item
 {
     [SerializeField] private int damage = 10;
